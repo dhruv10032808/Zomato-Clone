@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  position: relative;
+  height: 96vh;
+  min-height: 500px;
+  background-image: url("https://images.squarespace-cdn.com/content/5134cbefe4b0c6fb04df8065/1637777048532-PC89D1TW3N5EZ292YR94/RestaurantWebsite_Header_Desktop_1920x1062px.jpg?format=1000w&content-type=image%2Fjpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.top-nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.top-links {
+  display: flex;
+}
+
+.hamburger-menu {
+  display: none; /* Hide hamburger by default */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 10; /* Ensure it's clickable */
+}
+
+.hamburger-menu .bar {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.hamburger-menu .bar.open {
+  transform: rotate(45deg);
+  position: relative;
+}
+
+.hamburger-menu .bar:nth-child(2).open {
+  opacity: 0;
+}
+
+.hamburger-menu .bar:nth-child(3).open {
+  transform: rotate(-45deg);
+  position: relative;
+}
+
+.top-links {
+  display: flex;
+}
+
+.top-links.open {
+  display: flex; /* Show the links when the menu is open */
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.center-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.center-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.center-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 9999px;
+  width: 60%;
+  max-width: 500px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .top-links {
+    display: none; /* Hide links on small screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  .hamburger-menu {
+    display: flex; /* Show hamburger menu on small screens */
+  }
+
+  .top-links.open {
+    display: flex; /* Show the links when menu is open */
   }
 }
