@@ -269,6 +269,7 @@ header {
 }
 
 .form-container {
+  background-color: rgb(242, 242, 232);
   text-align: center;
   padding: 2rem;
   height: auto; /* Adjusted height to auto for better responsiveness */
