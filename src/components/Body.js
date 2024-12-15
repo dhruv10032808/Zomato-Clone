@@ -8,12 +8,16 @@ import Locality from "./Locality";
 function Body() {
   return (
     <div>
-      <section className="category-section">
+      <section>
         <Category />
       </section>
 
-      <section className="collection-section">
+      <section>
         <Collection />
+      </section>
+
+      <section>
+        <Locality />
       </section>
     </div>
   );
