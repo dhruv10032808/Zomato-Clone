@@ -141,6 +141,30 @@ header {
   text-align: center;
 }
 
+.category-cards {
+  display: flex; /* Use flexbox for a clean layout */
+  gap: 1.5rem; /* Adjust spacing between cards */
+  justify-content: center; /* Center align the cards */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  padding: 2rem 0; /* Add some padding */
+}
+
+.category-card {
+  width: 500px; /* Set a fixed width for cards */
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.category-card img {
+  width: 100%; /* Make the image stretch to the card's width */
+  height: 200px; /* Set a uniform height for all images */
+  object-fit: cover; /* Ensure the image fills the space without distortion */
+  border-bottom: 1px solid #ddd; /* Optional: Add a separator line */
+}
+
 @media (max-width: 768px) {
   .top-links {
     display: none; /* Hide links on small screens */
