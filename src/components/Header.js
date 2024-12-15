@@ -40,7 +40,7 @@ function Header() {
 
         {/* Search Bar */}
         <div className="search-bar">
-          <div className="location">
+          <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -52,11 +52,6 @@ function Header() {
                 d="M17.657 16.657L13.414 20.9m0 0L9.172 16.657M13.414 20.9V9m7-3a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <select>
-              <option value="Mumbai">Mumbai</option>
-              <option value="Pune">Pune</option>
-              <option value="Delhi">Delhi</option>
-            </select>
           </div>
           <input
             type="text"
