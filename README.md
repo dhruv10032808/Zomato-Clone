@@ -101,3 +101,21 @@ To install and set up the project:
 
 4. Start the development server:  
    npm start
+
+### Assumptions and Limitations
+
+- The data for the cards have been hard-coded.
+- Data provided is not dynamic.
+
+### Implementation steps
+
+- The react app is divided in three broad components:
+  1.Header
+  2.Body:
+  > Category card section
+  > Collection card section
+  > Nearby Localities section
+  > Form component
+  > 3.Footer
+
+#The design has been made responsive using media queries and Flexbox properties.
