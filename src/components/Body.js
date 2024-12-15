@@ -19,6 +19,10 @@ function Body() {
       <section>
         <Locality />
       </section>
+
+      <section>
+        <Form />
+      </section>
     </div>
   );
 }
